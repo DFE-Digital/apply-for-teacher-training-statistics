@@ -1,0 +1,103 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        2021-22 cycle statistics
+      </h1>
+
+      <p class="govuk-body">Statistics on applications for initial teacher training in England through the Apply for teacher training service.</p>
+
+      <p class="govuk-body govuk-!-font-size-16">Applications opened on 7 September 2021</p>
+      <p class="govuk-body govuk-!-font-size-16">Statistics up to midnight 30 November 2021</p>
+      <p class="govuk-body govuk-!-font-size-16">Next update: 3 January 2022</p>
+
+      <h2 class="govuk-heading-s">Contents</h2>
+
+      <ul class="govuk-list govuk-!-margin-bottom-8">
+        <li><a href="#applicants-by-status" class="govuk-link">Applicants by status</a>
+      </ul>
+
+
+      <table class="govuk-table govuk-!-font-size-16" id="applicants-by-status">
+        <caption class="govuk-table__caption govuk-table__caption--m">Applicants by status</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Status</th>
+            <th scope="col" class="govuk-table__header">Initial application</th>
+            <th scope="col" class="govuk-table__header">Apply again</th>
+            <th scope="col" class="govuk-table__header">Total</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Recruited</th>
+            <td class="govuk-table__cell">10,000</td>
+            <td class="govuk-table__cell">1,000</td>
+            <td class="govuk-table__cell">11,000</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Conditions pending</th>
+            <td class="govuk-table__cell">10,000</td>
+            <td class="govuk-table__cell">1,000</td>
+            <td class="govuk-table__cell">11,000</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Received an offer</th>
+            <td class="govuk-table__cell">10,000</td>
+            <td class="govuk-table__cell">1,000</td>
+            <td class="govuk-table__cell">11,000</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Awaiting provider decisions</th>
+            <td class="govuk-table__cell">10,000</td>
+            <td class="govuk-table__cell">1,000</td>
+            <td class="govuk-table__cell">11,000</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Offer declined</th>
+            <td class="govuk-table__cell">10,000</td>
+            <td class="govuk-table__cell">1,000</td>
+            <td class="govuk-table__cell">11,000</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Application withdrawn</th>
+            <td class="govuk-table__cell">10,000</td>
+            <td class="govuk-table__cell">1,000</td>
+            <td class="govuk-table__cell">11,000</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular">Application unsuccessful</th>
+            <td class="govuk-table__cell">10,000</td>
+            <td class="govuk-table__cell">1,000</td>
+            <td class="govuk-table__cell">11,000</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Total</th>
+            <td class="govuk-table__cell govuk-!-font-weight-bold">70,000</td>
+            <td class="govuk-table__cell govuk-!-font-weight-bold">7,000</td>
+            <td class="govuk-table__cell govuk-!-font-weight-bold">77,000</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <p class="govuk-body">People can apply for up to 3 courses in their initial application. If these are all unsuccessful, the applicant can apply again an unlimited number of times, but for only a single course at a time.</p>
+
+      <p class="govuk-body">Applicants are only counted once. If they have applied again, they are not counted in the first column, and only their most recent status is counted in the second column.</p>
+
+      <p class="govuk-body">If an applicant applied to multiple courses, they are counted under the highest row which applies.</p>
+
+      <p class="govuk-body">For example, if they have received 1 offer, declined 1 offer, and are awaiting a provider decision on a third course, they are counted under “Received an offer”.</p>
+
+    </div>
+  </div>
+
+{% endblock %}
