@@ -13,7 +13,7 @@
       </h1>
 
       <p class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-1">Data for each month in the recruitment cycle is added [when?].</p>
-      <p class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-1">The data currently shown covers [date] to [date].</p>
+      <p class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-1">Data currently shown: [date] to [date].</p>
 
       <div class="govuk-body govuk-!-font-size-16 govuk-!-margin-bottom-1 govuk-!-margin-top-5">Contents</div>
 
@@ -97,7 +97,20 @@
 
       <h2 class="govuk-heading-m" id="applicants-by-status">2. Application status</h2>
 
-      <p class="govuk-body">A candidate's application can be in different states once they've submitted it, outlined in the following 2 tables.</p>
+      <p class="govuk-body">A candidate's application can be in different states once they've submitted it, including:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>recruited</li>
+        <li>offer accepted by the candidate, but they still need to meet the conditions of the offer</li>
+        <li>offer made by provider, but the candidate has not responded yet</li>
+        <li>awaiting provider decisions</li>
+        <li>offer declined by candidate</li>
+        <li>application withdrew by candidate</li>
+        <li>application rejected by provider</li>
+      </ul>
+
+      <p class="govuk-body">The order of these bullet points gives a rough indication "application progress".</p>
+
+      <p class="govuk-body">For example, if a candidate is 'recruited', they're closer to getting on a course than if they're 'rejected'.</p>
 
       <table class="govuk-table govuk-!-font-size-16">
         <caption class="govuk-table__caption govuk-table__caption--s">Candidates' most "progressed" application status</caption>
@@ -123,7 +136,7 @@
             <td class="govuk-table__cell govuk-table__cell--numeric">11,000</td>
           </tr>
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" data-sort-value="3">Received an offer but not responded</th>
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" data-sort-value="3">Offer made, awaiting candidate response</th>
             <td class="govuk-table__cell govuk-table__cell--numeric">8,000</td>
             <td class="govuk-table__cell govuk-table__cell--numeric">500</td>
             <td class="govuk-table__cell govuk-table__cell--numeric">11,000</td>
@@ -135,13 +148,13 @@
             <td class="govuk-table__cell govuk-table__cell--numeric">11,000</td>
           </tr>
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" data-sort-value="5">Declined an offer</th>
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" data-sort-value="5">Offer declined</th>
             <td class="govuk-table__cell govuk-table__cell--numeric">6,000</td>
             <td class="govuk-table__cell govuk-table__cell--numeric">50</td>
             <td class="govuk-table__cell govuk-table__cell--numeric">11,000</td>
           </tr>
           <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" data-sort-value="6">Withdrew an application</th>
+            <th scope="row" class="govuk-table__header govuk-!-font-weight-regular" data-sort-value="6">Application withdrawn</th>
             <td class="govuk-table__cell govuk-table__cell--numeric">5,000</td>
             <td class="govuk-table__cell govuk-table__cell--numeric">80</td>
             <td class="govuk-table__cell govuk-table__cell--numeric">11,000</td>
@@ -163,15 +176,9 @@
         </tfoot>
       </table>
 
-      <p class="govuk-body">This table counts only one application per candidate, rather than counting every application a candidate has in progress when the data was taken.</p>
+      <p class="govuk-body">This table counts only the most "progressed" application of a candidate, rather than counting every application a candidate had in progress when the data was taken.</p>
 
-      <p class="govuk-body">If they were making multiple applications, only their most "progressed" application is counted. The order in which the statuses show on the table is the order in which we're defining "progress".</p>
-
-      <p class="govuk-body">For example, if a candidate has received an offer but is also waiting for a provider decision and has declined an offer, only their 'offer' application is counted.</p>
-
-      <p class="govuk-body">When applying again candidates can only apply to one course at a time. So if a candidate has submitted an 'apply again' application at the time the data was collected, the status of that application is counted in the apply again column.</p>
-
-      <p class="govuk-body">If a candidate has started applying again but has not yet submitted their application, the status of their previous application is counted instead.</p>
+      <p class="govuk-body">If a candidate had applied again by the time the data was collected, the status of that application is counted in the apply again column.</p>
 
       <table class="govuk-table govuk-!-font-size-16">
         <caption class="govuk-table__caption govuk-table__caption--s">All submitted application statuses</caption>
