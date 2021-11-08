@@ -27,7 +27,7 @@
         <li>
           <a href="#applicants-by-status" class="govuk-link app-toc__link">
             <span class="app-toc__number">2.</span>
-            <span class="app-toc__content">By status</span>
+            <span class="app-toc__content">By application status</span>
           </a>
         </li>
         <li>
@@ -51,7 +51,7 @@
         <li>
           <a href="#applications-by-course-age-group" class="govuk-link app-toc__link">
             <span class="app-toc__number">6.</span>
-            <span class="app-toc__content">By course age group</span>
+            <span class="app-toc__content">By education stage</span>
           </a>
         </li>
         <li>
@@ -95,7 +95,7 @@
 
       <p class="govuk-body">Teacher training candidates can apply for up to 3 courses in their first application. If their application does not lead to a place, they can apply again as many times as they like, for a single course at a time.</p>
 
-      <h2 class="govuk-heading-m" id="applicants-by-status">2. Application status</h2>
+      <h2 class="govuk-heading-m" id="applicants-by-status">2. By application status</h2>
 
       <p class="govuk-body">A candidate's application can be in different states once they've submitted it, including:</p>
       <ul class="govuk-list govuk-list--bullet">
@@ -108,12 +108,14 @@
         <li>application rejected by provider</li>
       </ul>
 
-      <p class="govuk-body">The order of these bullet points gives a rough indication "application progress".</p>
+      <p class="govuk-body">The order of these bullet points gives a rough indication "application progress": if a candidate is recruited, they're closer to getting on a course than if they're rejected.</p>
 
-      <p class="govuk-body">For example, if a candidate is 'recruited', they're closer to getting on a course than if they're 'rejected'.</p>
+      <p class="govuk-body">The table below counts only the most "progressed" application of a candidate, rather than counting every application a candidate had open during the data period.</p>
+
+      <p class="govuk-body">If a candidate had applied again during the data period, the status of that application is counted in the apply again column, and any previous applications are not counted.</p>
 
       <table class="govuk-table govuk-!-font-size-16">
-        <caption class="govuk-table__caption govuk-table__caption--s">Unique candidate view of application status</caption>
+        <caption class="govuk-table__caption govuk-table__caption--s">Candidates by their most progressed application status</caption>
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
             <th scope="col" class="govuk-table__header govuk-!-font-weight-regular" aria-sort="ascending">Status</th>
@@ -176,12 +178,10 @@
         </tfoot>
       </table>
 
-      <p class="govuk-body">This table counts only the most "progressed" application of a candidate, rather than counting every application a candidate had open during the data period.</p>
-
-      <p class="govuk-body">If a candidate had applied again during the data period, the status of that application is counted in the apply again column, and any previous applications are not counted.</p>
+      <p class="govuk-body">This table, on the other hand, counts all applications by their status.</p>
 
       <table class="govuk-table govuk-!-font-size-16">
-        <caption class="govuk-table__caption govuk-table__caption--s">All application statuses</caption>
+        <caption class="govuk-table__caption govuk-table__caption--s">All applications by status</caption>
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
             <th scope="col" class="govuk-table__header govuk-!-font-weight-regular" aria-sort="ascending">Status</th>
@@ -244,9 +244,6 @@
         </tfoot>
       </table>
 
-      <p class="govuk-body">This table, on the other hand, counts all applications.</p>
-
-
     </div>
   </div>
   <div class="govuk-grid-row">
@@ -254,7 +251,9 @@
 
       <h2 class="govuk-heading-l" id="applicants-by-age-group">3. By age group</h2>
 
-      <p class="govuk-body">The age of each applicant is calculated as of 31 August 2022.</p>
+      <p class="govuk-body">The age of each applicant is calculated as of 31 August 2022. What does that mean?</p>
+
+      <p class="govuk-body">This table counts all candidates by their age group.</p>
 
       <table class="govuk-table govuk-!-font-size-16">
         <caption class="govuk-table__caption govuk-table__caption--s">Candidates by age group</caption>
@@ -408,6 +407,8 @@
 
       <h2 class="govuk-heading-l" id="applicants-by-sex">4. By sex</h2>
 
+      <p class="govuk-body">This table counts all candidates by the sex that they said they were when applying.</p>
+
       <table class="govuk-table govuk-!-font-size-16">
         <caption class="govuk-table__caption govuk-table__caption--s">Candidates by sex</caption>
         <thead class="govuk-table__head">
@@ -478,7 +479,8 @@
     <div class="govuk-grid-column-two-thirds">
       <h2 class="govuk-heading-l" id="applicants-by-area">5. By area</h2>
 
-      <p class="govuk-body">Areas are derived from the contact address candidates gave when submitting their application.</p>
+      <p class="govuk-body">This table counts all candidates by the contact address they gave when applying.</p>
+
     </div>
   </div>
   <div class="govuk-grid-row">
@@ -662,14 +664,17 @@
     <div class="govuk-grid-column-two-thirds">
       <h2 class="govuk-heading-l" id="applications-by-course-age-group">6. By education stage</h2>
 
-      <p class="govuk-body">Apply for teacher training allows candidates to apply for primary and secondary courses. It also has some further education courses.</p>
+      <p class="govuk-body">Apply for teacher training allows candidates to apply for primary and secondary teacher training, as well as some further education teacher training courses.</p>
+
+      <p class="govuk-body">This table counts all applications by education stage.</p>
+
     </div>
   </div>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 
       <table class="govuk-table govuk-!-font-size-16">
-        <caption class="govuk-table__caption govuk-table__caption--s">Applications by course age group</caption>
+        <caption class="govuk-table__caption govuk-table__caption--s">Applications by education stage</caption>
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
             <th scope="col" class="govuk-table__header govuk-!-font-weight-regular" aria-sort="ascending">Age group</th>
@@ -729,20 +734,19 @@
         </tfoot>
       </table>
 
-      <p class="govuk-body">This table counts all applications by education stage.</p>
-
-
     </div>
   </div>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h2 class="govuk-heading-l" id="applications-by-course-type">7. By teacher training route</h2>
+      <h2 class="govuk-heading-l" id="applications-by-course-type">7. By course type</h2>
 
       <p class="govuk-body">There are different ways to train to teach - sometimes called 'routes' into teaching.</p>
 
-      <p class="govuk-body">Apply for teaching training does not enable candidates to apply for all types of training, for example, it does not include Teach First.</p>
+      <p class="govuk-body">Apply for teaching training does not enable candidates to apply for all types of training courses - for example, it does not include Teach First.</p>
 
-      <p class="govuk-body">The routes available through Apply for teacher training are outlined in the table below.</p>
+      <p class="govuk-body">The course types available through Apply for teacher training are outlined in the table below.</p>
+
+      <p class="govuk-body">This table counts all applications by course type.</p>
 
     </div>
   </div>
@@ -824,15 +828,15 @@
         </tfoot>
       </table>
 
-      <p class="govuk-body">This table counts all applications by type of training.</p>
-
     </div>
   </div>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h2 class="govuk-heading-l" id="applications-by-primary-subject">8. By primary specialist subject</h2>
 
-      <p class="govuk-body">Some primary courses allow candidates to specialise in a particular subject.</p>
+      <p class="govuk-body">Some primary courses allow candidates to specialise in a particular subject. This may help candidates influence the way a particular subject is taught in their school when they start teaching.</p>
+
+      <p class="govuk-body">This table counts all applications by specialist subject.</p>
 
     </div>
   </div>
@@ -933,15 +937,18 @@
         </tfoot>
       </table>
 
-      <p class="govuk-body">This table counts all applications by specialist subject.</p>
-
     </div>
   </div>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h2 class="govuk-heading-l" id="applications-by-secondary-subject">9. By secondary subject</h2>
 
-      <p class="govuk-body">Candidates choose a subject for secondary teacher training.</p>
+      <p class="govuk-body">Candidates choose at least one subject for secondary teacher training.</p>
+
+      <p class="govuk-body">This table counts all applications by secondary subject.</p>
+
+      <p class="govuk-body">If a course has more than one subject, how is this counted? Seperately?</p>
+
     </div>
   </div>
   <div class="govuk-grid-row">
@@ -1221,22 +1228,23 @@
         </tfoot>
       </table>
 
-      <p class="govuk-body">This table counts all applications by secondary subject.</p>
-
     </div>
   </div>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h2 class="govuk-heading-l" id="applications-by-provider-area">10. By provider area</h2>
 
-      <p class="govuk-body">The area is derived from the contact address given by the provider, and may not match the area where the students undertake their training. Is this counting unique candidates rather than applications to a provider area?</p>
+      <p class="govuk-body">Provider areas are taken from the contact address they gave. These areas may be different to where students do their training.</p>
+
+      <p class="govuk-body">This table counts all candidates by the provider area they applied to.</p>
+
     </div>
   </div>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 
       <table class="govuk-table govuk-!-font-size-16">
-        <caption class="govuk-table__caption govuk-table__caption--s">Applicants by area of England of the provider</caption>
+        <caption class="govuk-table__caption govuk-table__caption--s">Candidates by provider area</caption>
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
             <th scope="col" class="govuk-table__header govuk-!-font-weight-regular" aria-sort="ascending">Area</th>
@@ -1361,11 +1369,11 @@
     <div class="govuk-grid-column-two-thirds">
       <h2 class="govuk-heading-l" id="download">11. Download the data</h2>
 
-      <p class="govuk-body">You can download all of the data on this page in CSV (comma separated values) format, which can be opened in a spreadsheet and other analysis tools.</p>
+      <p class="govuk-body">You can download all of the data on this page in CSV (comma separated values) format, which can be opened in a spreadsheet and used in other analysis tools.</p>
 
-      <p class="govuk-body">The downloads include some further breakdowns of the data by combining fields, for example applicant age group and sex.</p>
+      <p class="govuk-body">The downloads include some further breakdowns of the data by combining fields - for example, applicant age group and sex.</p>
 
-      <p class="govuk-body">Something about how rounding / disclosure / etc is handled in the CSV files.</p>
+      <p class="govuk-body">Something about how rounding / disclosure / etc is handled in the CSV files. What do we want to say here?</p>
 
       <p class="govuk-body">
         <a href="#" class="govuk-link">
