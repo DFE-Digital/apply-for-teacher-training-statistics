@@ -5,6 +5,10 @@ const router = express.Router()
 
 module.exports = router
 
+router.get('/subject-report', async (req, res) => {
+  res.render('subject_report')
+})
+
 router.get('/:yyyy-:mm', async (req, res) => {
   res.render('month')
 })

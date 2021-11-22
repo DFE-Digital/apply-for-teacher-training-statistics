@@ -26,7 +26,7 @@ function SortableTable(table) {
   createStatusBox();
 
   function createHeadingButtons() {
-    var headings = table.querySelectorAll('thead th');
+    var headings = table.querySelectorAll('thead th[aria-sort]');
     var heading;
 
     for (var i = 0; i < headings.length; i++) {
@@ -181,11 +181,9 @@ function SortableTable(table) {
 
   function getCellValue(cell) {
 
-    console.log(cell)
     var cellValue = cell.getAttribute('data-sort-value') || cell.textContent
     cellValue = parseFloat(cellValue.replaceAll(',','')) || cellValue
 
-    console.log(cellValue)
     return cellValue
 
   }

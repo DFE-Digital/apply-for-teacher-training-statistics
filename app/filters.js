@@ -7,6 +7,21 @@ module.exports = function (env) {
    */
   var filters = {}
 
+  filters.randomNumber = function(_, min, max) {
+    const range = max - min;
+
+    return Math.floor(Math.random() * range) + min
+  }
+
+  filters.displayChange = function(number) {
+
+    if (String(number).startsWith("-")) {
+      return `<span class="app__number--negative">−${String(number).substr(1)}</span>`
+    } else {
+      return "+" + number
+    }
+  }
+
   /* ------------------------------------------------------------------
     add your methods to the filters obj below this comment block:
     @example:

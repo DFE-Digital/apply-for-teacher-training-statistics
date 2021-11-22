@@ -1,0 +1,16 @@
+
+.app-table__header--border-right,
+.app-table__cell--border-right {
+  border-right-width: 1px;
+  border-right-color: $govuk-border-colour;
+  border-right-style: solid;
+}
+
+.app-table__header--border-bottom-0 {
+  border-bottom-width: 0;
+}
+
+.app-table__header--padding-left,
+.app-table__cell--padding-left {
+  padding-left: govuk-spacing(4);
+}
