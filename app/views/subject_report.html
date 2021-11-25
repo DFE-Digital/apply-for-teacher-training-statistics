@@ -20,7 +20,26 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 
-      {% set secondarySubjects = ["Art, or Art and Design", "Biology", "Business studies", "Chemistry", "Citizenship", "Classics", "Communication and Media studies", "Computing", "Dance", "Design and Technology", "Drama", "Economics", "English", "Geography", "History", "Mathematics", "Modern languages", "Music", "Physical Education", "Physics", "Psychology", "Religious Education", "Social Sciences"] %}
+      {% set secondarySubjects = [
+  ["Art & Design", 145, 32, 156, 56, 139, 57],
+  ["Biology", 196, 42, 61, 67, 57, 78],
+  ["Business studies", 101, 13, 273, 83, 433, 62],
+  ["Chemistry", 179, 42, 152, 76, 150, 71],
+  ["Classics", 23, 3, 177, 62, 300, 100],
+  ["Computing", 116, 23, 166, 89, 96, 100],
+  ["Design & Technology", 84, 23, 200, 84, 209, 110],
+  ["Drama", 131, 32, 156, 80, 178, 78],
+  ["English", 558, 149, 95, 76, 94, 94],
+  ["Geography", 132, 32, 59, 74, 46, 70],
+  ["History", 381, 117, 112, 71, 121, 98],
+  ["Mathematics", 522, 107, 125, 88, 99, 97],
+  ["Modern foreign languages", 207, 33, 86, 59, 85, 67],
+  ["Music", 74, 15, 114, 73, 107, 71],
+  ["Other", 281, 62, 290, 172, 295, 214],
+  ["Physical Education", 1042, 335, 79, 88, 87, 107],
+  ["Physics", 105, 24, 128, 98, 100, 114],
+  ["Religious Education", 74, 23, 73, 61, 70, 70]
+] %}
 
       <table class="govuk-table govuk-!-font-size-16">
         <caption class="govuk-table__caption govuk-table__caption--m">Candidates applying and recruitment by subject, compared to previous cycle</caption>
@@ -33,9 +52,9 @@
           <tr class="govuk-table__row">
             <th scope="col" class="govuk-table__header govuk-!-font-weight-regular app-table__header--border-right" aria-sort="ascending">Subject</th>
             <th class="govuk-table__header govuk-!-font-weight-regular govuk-table__header--numeric" aria-sort="none">2021 to 2022</th>
-            <th class="govuk-table__header govuk-!-font-weight-regular govuk-table__header--numeric app-table__header--border-right" aria-sort="none">Change vs last cycle</th>
+            <th class="govuk-table__header govuk-!-font-weight-regular govuk-table__header--numeric app-table__header--border-right" aria-sort="none">vs 2019</th>
             <th class="govuk-table__header govuk-!-font-weight-regular govuk-table__header--numeric"  aria-sort="none">2021 to 2022</th>
-            <th class="govuk-table__header govuk-!-font-weight-regular govuk-table__header--numeric"  aria-sort="none">Change vs last cycle</th>
+            <th class="govuk-table__header govuk-!-font-weight-regular govuk-table__header--numeric"  aria-sort="none">vs 2019</th>
           </tr>
         </thead>
 
@@ -43,15 +62,11 @@
 
           {% for subject in secondarySubjects %}
             <tr class="govuk-table__row">
-
-              {% set appliedNumberChange = "" | randomNumber(-100,200) %}
-              {% set recruitedNumberChange = "" | randomNumber(-80,300) %}
-
-              <th scope="row" class="govuk-table__header govuk-!-font-weight-regular app-table__header--border-right">{{ subject }}</th>
-              <td class="govuk-table__cell govuk-table__cell--numeric">{{ "" | randomNumber(10,2000) }}</td>
-              <td class="govuk-table__cell govuk-table__cell--numeric app-table__cell--border-right" data-sort-value="{{ appliedNumberChange }}">{{ appliedNumberChange | displayChange | safe }}</td>
-              <td class="govuk-table__cell govuk-table__cell--numeric app-table__cell--padding-left">{{ "" | randomNumber(5,1400) }}</td>
-              <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ recruitedNumberChange }}">{{ recruitedNumberChange | displayChange | safe }}</td>
+              <th scope="row" class="govuk-table__header govuk-!-font-weight-regular app-table__header--border-right">{{ subject[0] }}</th>
+              <td class="govuk-table__cell govuk-table__cell--numeric">{{ subject[1] }}</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric app-table__cell--border-right" data-sort-value="{{ subject[3] }}">{{ subject[3] }}%</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric app-table__cell--padding-left">{{ subject[2] }}</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ subject[4] }}">{{ subject[4] }}%</td>
             </tr>
           {% endfor %}
 
@@ -60,35 +75,47 @@
             {% set appliedNumberChange = "" | randomNumber(-10,20) %}
 
             <th scope="row" class="govuk-table__header govuk-!-font-weight-regular app-table__header--border-right">Split (applied equally to 2 different subjects)</th>
-            <td class="govuk-table__cell govuk-table__cell--numeric">{{ "" | randomNumber(10,20) }}</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric app-table__cell--border-right" data-sort-value="{{ appliedNumberChange }}">{{ appliedNumberChange | displayChange | safe }}</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric">185</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric app-table__cell--border-right" data-sort-value="{{ 197 }}">197%</td>
             <td class="govuk-table__cell govuk-table__cell--numeric app-table__cell--padding-left"></td>
             <td class="govuk-table__cell govuk-table__cell--numeric"></td>
           </tr>
         </tbody>
         <tfoot>
             <tr class="govuk-table__row">
-
-              {% set appliedNumberChange = "" | randomNumber(-100,200) %}
-              {% set recruitedNumberChange = "" | randomNumber(-80,300) %}
-
               <th scope="row" class="govuk-table__header app-table__header--border-right">STEM subjects total</th>
-              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric">{{ "" | randomNumber(1000,2000) }}</td>
-              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--border-right" data-sort-value="{{ appliedNumberChange }}">{{ appliedNumberChange | displayChange | safe }}</td>
-              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--padding-left">{{ "" | randomNumber(300,600) }}</td>
-              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric" data-sort-value="{{ recruitedNumberChange }}">{{ recruitedNumberChange | displayChange | safe }}</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric">1118</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--border-right" data-sort-value="{{ 111 }}">111%</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--padding-left">238</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric" data-sort-value="92">92%</td>
             </tr>
-
             <tr class="govuk-table__row">
-
-              {% set appliedNumberChange = "" | randomNumber(0,200) %}
-              {% set recruitedNumberChange = "" | randomNumber(0,300) %}
-
+              <th scope="row" class="govuk-table__header app-table__header--border-right">Ebacc subjects total</th>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric">2419</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--border-right" data-sort-value="{{ 100 }}">100%</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--padding-left">572</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric" data-sort-value="92">92%</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header app-table__header--border-right">Primary total</th>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric">4263</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--border-right" data-sort-value="{{ 102 }}">102%</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--padding-left">1302</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric" data-sort-value="117">117%</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header app-table__header--border-right">Secondary total</th>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric">4351</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--border-right" data-sort-value="{{ 102 }}">102%</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--padding-left">1107</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric" data-sort-value="98">98%</td>
+            </tr>
+            <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header app-table__header--border-right">Total</th>
-              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric">{{ "" | randomNumber(6000,8000) }}</td>
-              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--border-right" data-sort-value="{{ appliedNumberChange }}">{{ appliedNumberChange | displayChange | safe }}</td>
-              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--padding-left">{{ "" | randomNumber(3000,4000) }}</td>
-              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric" data-sort-value="{{ recruitedNumberChange }}">{{ recruitedNumberChange | displayChange | safe }}</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric">8799</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--border-right" data-sort-value="{{ 103 }}">103%</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--padding-left">2409</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric" data-sort-value="107">107%</td>
             </tr>
         </tfoot>
       </table>
