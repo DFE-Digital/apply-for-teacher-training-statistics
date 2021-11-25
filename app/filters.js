@@ -22,6 +22,15 @@ module.exports = function (env) {
     }
   }
 
+  filters.displayPercentage = function(number) {
+
+    if (number < 75) {
+      return `<span class="app__number--negative">${String(number)}%</span>`
+    } else {
+      return String(number) + "%"
+    }
+  }
+
   /* ------------------------------------------------------------------
     add your methods to the filters obj below this comment block:
     @example:
