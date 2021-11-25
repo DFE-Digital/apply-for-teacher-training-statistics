@@ -46,15 +46,17 @@
         <thead class="govuk-table__head">
           <tr class="govuk-table__row">
             <th class="app-table__header--border-right"></th>
-            <th scope="colgroup" colspan="2" class="govuk-table__header app-table__header--border-right app-table__header--border-bottom-0 app-table__header--padding-left">Candidates applying</th>
-            <th scope="colgroup" colspan="2" class="govuk-table__header app-table__header--border-bottom-0 app-table__header--border-bottom-0 app-table__header--padding-left">Candidates recruited</th>
+            <th scope="colgroup" colspan="3" class="govuk-table__header app-table__header--border-right app-table__header--border-bottom-0 app-table__header--padding-left">Candidates applying</th>
+            <th scope="colgroup" colspan="3" class="govuk-table__header app-table__header--border-bottom-0 app-table__header--border-bottom-0 app-table__header--padding-left">Candidates recruited</th>
           </tr>
           <tr class="govuk-table__row">
             <th scope="col" class="govuk-table__header govuk-!-font-weight-regular app-table__header--border-right" aria-sort="ascending">Subject</th>
             <th class="govuk-table__header govuk-!-font-weight-regular govuk-table__header--numeric" aria-sort="none">2021 to 2022</th>
-            <th class="govuk-table__header govuk-!-font-weight-regular govuk-table__header--numeric app-table__header--border-right" aria-sort="none">vs 2019</th>
+            <th class="govuk-table__header govuk-!-font-weight-regular govuk-table__header--numeric " aria-sort="none">vs 2019</th>
+            <th class="govuk-table__header govuk-!-font-weight-regular govuk-table__header--numeric app-table__header--border-right" aria-sort="none">vs 2021</th>
             <th class="govuk-table__header govuk-!-font-weight-regular govuk-table__header--numeric"  aria-sort="none">2021 to 2022</th>
             <th class="govuk-table__header govuk-!-font-weight-regular govuk-table__header--numeric"  aria-sort="none">vs 2019</th>
+            <th class="govuk-table__header govuk-!-font-weight-regular govuk-table__header--numeric"  aria-sort="none">vs 2021</th>
           </tr>
         </thead>
 
@@ -64,9 +66,11 @@
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header govuk-!-font-weight-regular app-table__header--border-right">{{ subject[0] }}</th>
               <td class="govuk-table__cell govuk-table__cell--numeric">{{ subject[1] }}</td>
-              <td class="govuk-table__cell govuk-table__cell--numeric app-table__cell--border-right" data-sort-value="{{ subject[3] }}">{{ subject[3] }}%</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ subject[3] }}">{{ subject[3] }}%</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric app-table__cell--border-right" data-sort-value="{{ subject[3] }}">{{ subject[4] }}%</td>
               <td class="govuk-table__cell govuk-table__cell--numeric app-table__cell--padding-left">{{ subject[2] }}</td>
-              <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ subject[4] }}">{{ subject[4] }}%</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ subject[4] }}">{{ subject[5] }}%</td>
+              <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ subject[4] }}">{{ subject[6] }}%</td>
             </tr>
           {% endfor %}
 
@@ -76,8 +80,10 @@
 
             <th scope="row" class="govuk-table__header govuk-!-font-weight-regular app-table__header--border-right">Split (applied equally to 2 different subjects)</th>
             <td class="govuk-table__cell govuk-table__cell--numeric">185</td>
-            <td class="govuk-table__cell govuk-table__cell--numeric app-table__cell--border-right" data-sort-value="{{ 197 }}">197%</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric" data-sort-value="{{ 197 }}">197%</td>
+            <td class="govuk-table__cell govuk-table__cell--numeric app-table__cell--border-right" data-sort-value="{{ 133 }}">133%</td>
             <td class="govuk-table__cell govuk-table__cell--numeric app-table__cell--padding-left"></td>
+            <td class="govuk-table__cell govuk-table__cell--numeric"></td>
             <td class="govuk-table__cell govuk-table__cell--numeric"></td>
           </tr>
         </tbody>
@@ -85,37 +91,47 @@
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header app-table__header--border-right">STEM subjects total</th>
               <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric">1118</td>
-              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--border-right" data-sort-value="{{ 111 }}">111%</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric" data-sort-value="{{ 111 }}">111%</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--border-right" data-sort-value="{{ 82 }}">82%</td>
               <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--padding-left">238</td>
               <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric" data-sort-value="92">92%</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric" data-sort-value="89">89%</td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header app-table__header--border-right">Ebacc subjects total</th>
               <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric">2419</td>
-              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--border-right" data-sort-value="{{ 100 }}">100%</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric " data-sort-value="{{ 100 }}">100%</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--border-right" data-sort-value="{{ 75 }}">75%</td>
               <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--padding-left">572</td>
               <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric" data-sort-value="92">92%</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric" data-sort-value="89">89%</td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header app-table__header--border-right">Primary total</th>
               <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric">4263</td>
-              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--border-right" data-sort-value="{{ 102 }}">102%</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric " data-sort-value="{{ 102 }}">102%</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--border-right" data-sort-value="{{ 90 }}">90%</td>
               <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--padding-left">1302</td>
               <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric" data-sort-value="117">117%</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric" data-sort-value="125">125%</td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header app-table__header--border-right">Secondary total</th>
               <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric">4351</td>
-              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--border-right" data-sort-value="{{ 102 }}">102%</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric " data-sort-value="{{ 102 }}">102%</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--border-right" data-sort-value="{{ 80 }}">80%</td>
               <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--padding-left">1107</td>
               <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric" data-sort-value="98">98%</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric" data-sort-value="94">94%</td>
             </tr>
             <tr class="govuk-table__row">
               <th scope="row" class="govuk-table__header app-table__header--border-right">Total</th>
               <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric">8799</td>
-              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--border-right" data-sort-value="{{ 103 }}">103%</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numericapp-table__cell--border-righ" data-sort-value="{{ 103 }}">103%</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--border-right" data-sort-value="{{ 85 }}">85%</td>
               <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric app-table__cell--padding-left">2409</td>
               <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric" data-sort-value="107">107%</td>
+              <td class="govuk-table__cell govuk-!-font-weight-bold govuk-table__cell--numeric" data-sort-value="108">108%</td>
             </tr>
         </tfoot>
       </table>
