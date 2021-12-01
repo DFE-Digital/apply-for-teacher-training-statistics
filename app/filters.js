@@ -26,6 +26,8 @@ module.exports = function (env) {
 
     if (number < 75) {
       return `<span class="app__number--negative">${String(number)}%</span>`
+    } else if (number >= 100) {
+      return `<span class="app__number--positive">${String(number)}%</span>`
     } else {
       return String(number) + "%"
     }

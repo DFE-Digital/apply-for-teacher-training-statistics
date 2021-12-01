@@ -1,3 +1,7 @@
 .app__number--negative {
   color: $govuk-error-colour;
 }
+
+.app__number--positive {
+  color: $govuk-success-colour;
+}
